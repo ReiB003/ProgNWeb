@@ -14,20 +14,26 @@ header {
     padding: 1em 0;
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ndrysho orientimin në vertikal për header-in */
+    align-items: center; /* Vendos objektet në qendër të header-it */
+    padding-bottom: 1em; /* Shto një hapësirë në fund të header-it */
 }
 
 header h1 {
     margin: 0;
+    font-size: 24px; /* Redukto madhësinë e titullit në header për telefona */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Shfaq listen e navigimit vertikalisht në pajisjet e vogla */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin-right: 0; /* Fshi margjinin e djathtë për çdo element të listës */
 }
 
 nav ul li a {
@@ -36,10 +42,15 @@ nav ul li a {
     padding: 5px 10px;
     border-radius: 3px;
     transition: background-color 0.3s;
+    color: inherit;
+    transition: color 0.3s;
+    display: block; /* Shfaq linkun e navigimit vertikalisht */
+    margin: 0.5em 0; /* Shto pak hapësirë mes çdo linku */
 }
 
 nav ul li a:hover {
     background-color: #2c3e50;
+    color: #2c3e50; /* Ndrysho ngjyrën e tekstit të linkut në kalimin mbi të */
 }
 
 .hero {
@@ -52,12 +63,12 @@ nav ul li a:hover {
 
 .hero h2 {
     margin: 0;
-    font-size: 2em;
+    font-size: 24px; /* Redukto madhësinë e titullit të heronit për telefona */
 }
 
 .hero p {
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 16px; /* Redukto madhësinë e tekstit të paragrafit për telefona */
 }
 
 main {
@@ -81,7 +92,8 @@ main {
 }
 
 .articles article img {
-    width: 100%;
+    width: 200px;
+    height: auto; /* Kjo do të sigurojë që lartësia të ndryshohet në përputhje me gjërësinë e caktuar */
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -106,6 +118,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    order: 2; /* Vendos footer-in pas kontaktit */
 }
 
 /* Forma e Kontaktit */
@@ -139,116 +152,6 @@ form button:hover {
     background-color: #2980b9;
 }
 
-/* Stilet për orën */
-.clock {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    color: #e0e0e0;
-}
-
-/* Stilet për orën dhe datën */
-.clock, .date {
-    position: fixed;
-    font-size: 20px;
-    color: #e0e0e0;
-}
-
-.clock {
-    top: 20px;
-    right: 20px;
-}
-
-.date {
-    top: 20px;
-    left: 20px;
-}
-
-
-/* Stilet për kërkimin */
-.search-form {
-    position: absolute;
-    top: 20%;
-    right: 25px;
-    transform: translateY(-50%);
-    display: flex;
-}
-
-.search-form input[type="text"] {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}
-
-.search-form button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #4CAF50;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-.search-form button:hover {
-    background-color: #45a049;
-}
-
-.articles article img {
-    width: 200px;
-    height: auto; /* Kjo do të sigurojë që lartësia të ndryshohet në përputhje me gjërësinë e caktuar */
-}
-
-@media only screen and (max-width: 600px) {
-    header {
-        padding: 0.5em 0; /* Redukto pak kornizën e kryeçarjes për telefona */
-        flex-direction: column; /* Ndrysho orientimin në vertikal për header-in */
-        align-items: center; /* Vendos objektet në qendër të header-it */
-        padding-bottom: 1em; /* Shto një hapësirë në fund të header-it */
-    }
-
-    header h1 {
-        font-size: 24px; /* Redukto madhësinë e titullit në header për telefona */
-    }
-
-    nav ul li {
-        display: block; /* Shfaq listen e navigimit vertikalisht në pajisjet e vogla */
-        margin-right: 0; /* Fshi margjinin e djathtë për çdo element të listës */
-    }
-
-    nav ul li a {
-        display: block; /* Shfaq linkun e navigimit vertikalisht */
-        margin: 0.5em 0; /* Shto pak hapësirë mes çdo linku */
-    }
-
-    .articles article img {
-        width: 100%; /* Bëni foton e artikullit të mbushë ekrani në pajisjet e vogla */
-    }
-
-    .hero h2 {
-        font-size: 24px; /* Redukto madhësinë e titullit të heronit për telefona */
-    }
-
-    .hero p {
-        font-size: 16px; /* Redukto madhësinë e tekstit të paragrafit për telefona */
-    }
-
-    /* Fshi orën dhe datën nga header për ekranet e vogla */
-    .clock, .date {
-        display: none;
-    }
-
-    footer {
-        order: 2; /* Vendos footer-in pas kontaktit */
-    }
-
-    .search-form {
-        display: none; /* Fshi kutinë e kërkimit */
-    }
-}
-
 /* Stilet për tabletë */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     header h1 {
@@ -266,4 +169,9 @@ form button:hover {
     .hero p {
         font-size: 20px; /* Rrit madhësinë e tekstit të paragrafit për tabletë */
     }
+}
+
+/* Heq underlining-in nga linqet */
+a {
+    text-decoration: none;
 }
