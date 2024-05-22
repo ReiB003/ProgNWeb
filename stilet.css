@@ -200,3 +200,70 @@ form button:hover {
     width: 200px;
     height: auto; /* Kjo do të sigurojë që lartësia të ndryshohet në përputhje me gjërësinë e caktuar */
 }
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 0.5em 0; /* Redukto pak kornizën e kryeçarjes për telefona */
+        flex-direction: column; /* Ndrysho orientimin në vertikal për header-in */
+        align-items: center; /* Vendos objektet në qendër të header-it */
+        padding-bottom: 1em; /* Shto një hapësirë në fund të header-it */
+    }
+
+    header h1 {
+        font-size: 24px; /* Redukto madhësinë e titullit në header për telefona */
+    }
+
+    nav ul li {
+        display: block; /* Shfaq listen e navigimit vertikalisht në pajisjet e vogla */
+        margin-right: 0; /* Fshi margjinin e djathtë për çdo element të listës */
+    }
+
+    nav ul li a {
+        display: block; /* Shfaq linkun e navigimit vertikalisht */
+        margin: 0.5em 0; /* Shto pak hapësirë mes çdo linku */
+    }
+
+    .articles article img {
+        width: 100%; /* Bëni foton e artikullit të mbushë ekrani në pajisjet e vogla */
+    }
+
+    .hero h2 {
+        font-size: 24px; /* Redukto madhësinë e titullit të heronit për telefona */
+    }
+
+    .hero p {
+        font-size: 16px; /* Redukto madhësinë e tekstit të paragrafit për telefona */
+    }
+
+    /* Fshi orën dhe datën nga header për ekranet e vogla */
+    .clock, .date {
+        display: none;
+    }
+
+    footer {
+        order: 2; /* Vendos footer-in pas kontaktit */
+    }
+
+    .search-form {
+        display: none; /* Fshi kutinë e kërkimit */
+    }
+}
+
+/* Stilet për tabletë */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 32px; /* Ndrysho madhësinë e titullit në header për tabletë */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Rivendos margjinin e djathtë për elementet e listës */
+    }
+
+    .hero h2 {
+        font-size: 32px; /* Rrit madhësinë e titullit të heronit për tabletë */
+    }
+
+    .hero p {
+        font-size: 20px; /* Rrit madhësinë e tekstit të paragrafit për tabletë */
+    }
+}
