@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog për Teknologjinë</title>
+    <link rel="stylesheet" href="stilet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Blog për Teknologjinë</h1>
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Kërko sipas fjalës kyçe">
+            <button type="button" onclick="searchArticles()">Kërko</button>
+        </form>
+        <nav>
+            <ul>
+                <li><a href="index.html">Faqja Kryesore</a></li>
+                <li><a href="artikulli.html">Artikuj</a></li>
+                <li><a href="kontakti.html">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="articles">
+            <!-- Artikujt e tjere këtu -->
+        </section>
+
+
+        <section class="hero">
+            <h2>Artikujt e Fundit</h2>
+            <p>Qëndroni të përditësuar me lajmet më të fundit nga bota e teknologjisë</p>
+        </section>
+        <section class="articles">
+            <article>
+                <img src="foto1.png" alt="Foto për artikullin 1">
+                <div class="content">
+                    <h3><a href="artikulli.html#art1">Pajisjet më të Fundit të Teknologjisë për 2024</a></h3>
+                    <p>Këtu janë pajisjet më të reja dhe më të mira të teknologjisë që janë lançuar në vitin 2024...</p>
+                </div>
+            </article>
+            <article>
+                <img src="foto2.jpeg" alt="Foto për artikullin 2">
+                <div class="content">
+                    <h3><a href="artikulli.html#art2">Këshilla për Sigurinë Kibernetike</a></h3>
+                    <p>Njihuni me këshillat më të mira për të mbrojtur veten në internet dhe për të siguruar të dhënat tuaja...</p>
+                </div>
+            </article>
+            <article>
+                <img src="foto3.jpg" alt="Foto për artikullin 3">
+                <div class="content">
+                    <h3><a href="artikulli.html#art3">Tendencat e Reja në Zhvillimin e Aplikacioneve Mobile</a></h3>
+                    <p>Shikoni trendet më të fundit dhe inovacionet në fushën e zhvillimit të aplikacioneve mobile për vitin 2024...</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 REI BIBA</p>
+    </footer>
+    <div id="clock" class="clock"></div>
+    <div id="date" class="date"></div>
+    <script src="skript.js"></script>
+</body>
+</html>
